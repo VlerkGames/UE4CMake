@@ -114,8 +114,9 @@ public class CMakeTargetInst
 
             foreach(string include in includes)
             {
-                rules.PublicIncludePaths.Add(include);
-            }
+				rules.PublicIncludePaths.Add(include);
+				rules.PrivateIncludePaths.Add(include);
+			}
         }
 
         if(values.ContainsKey("binaryDirectories"))
